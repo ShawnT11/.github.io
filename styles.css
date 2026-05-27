@@ -240,15 +240,15 @@ h1 {
 .topic-clusters {
   width: min(1180px, 88vw);
   margin: 0 auto;
-  padding: 16px 0 42px;
+  padding: 16px 0 52px;
 }
 
 .cluster-heading {
-  display: flex;
-  justify-content: space-between;
-  gap: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(280px, 0.6fr);
+  gap: 34px;
   align-items: end;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .cluster-heading h2 {
@@ -256,6 +256,11 @@ h1 {
   margin: 0;
   font-size: clamp(1.7rem, 3vw, 2.55rem);
   line-height: 1.1;
+}
+
+.cluster-heading > p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .cluster-grid {
@@ -267,12 +272,13 @@ h1 {
 .cluster-card {
   display: grid;
   align-content: space-between;
-  min-height: 210px;
+  min-height: 230px;
   padding: 20px;
   color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 16px 42px rgba(20, 26, 28, 0.13);
 }
 
 .cluster-card::after {
@@ -310,23 +316,23 @@ h1 {
 }
 
 .cluster-basics {
-  background: #075b58;
+  background: linear-gradient(145deg, #075b58, #0a8a82);
 }
 
 .cluster-training {
-  background: #3658c9;
+  background: linear-gradient(145deg, #263f9f, #5174e7);
 }
 
 .cluster-tools {
-  background: #687f3f;
+  background: linear-gradient(145deg, #4f692c, #8aa657);
 }
 
 .cluster-risks {
-  background: #c95d3d;
+  background: linear-gradient(145deg, #a9472f, #df7855);
 }
 
 .cluster-human {
-  background: #496978;
+  background: linear-gradient(145deg, #355260, #6f8d9d);
 }
 
 .content-shell {
@@ -625,14 +631,17 @@ h1 {
 
 .training-pathway {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1.1fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.75fr);
   gap: 26px;
   width: min(1180px, 88vw);
   margin: 0 auto 34px;
   padding: 32px;
-  background: #1b2424;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(54, 88, 201, 0.42), transparent 34%),
+    linear-gradient(135deg, #152021, #243033);
   border-radius: 8px;
   color: #ffffff;
+  overflow: hidden;
 }
 
 .pathway-copy h2 {
@@ -649,6 +658,17 @@ h1 {
 
 .training-pathway .section-label {
   color: #9ed7d1;
+}
+
+.pathway-image {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
 }
 
 .pathway-steps {
@@ -684,16 +704,18 @@ h1 {
 
 .human-ai-band {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.75fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.8fr);
   gap: 26px;
   width: min(1180px, 88vw);
   margin: 0 auto 34px;
   padding: 32px;
   background:
-    linear-gradient(135deg, rgba(73, 105, 120, 0.12), rgba(224, 163, 43, 0.1)),
+    radial-gradient(circle at 100% 0%, rgba(201, 93, 61, 0.18), transparent 35%),
+    linear-gradient(135deg, rgba(73, 105, 120, 0.15), rgba(224, 163, 43, 0.12)),
     var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .human-ai-band h2 {
@@ -706,6 +728,17 @@ h1 {
   max-width: 720px;
   margin: 18px 0 0;
   color: var(--muted);
+}
+
+.human-ai-image {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(20, 26, 28, 0.16);
 }
 
 .human-ai-links {
@@ -730,26 +763,115 @@ h1 {
 .article-list-page {
   width: min(1180px, 88vw);
   margin: 0 auto;
-  padding: 68px 0;
+  padding: 44px 0 68px;
+}
+
+.article-library-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(340px, 0.75fr);
+  gap: 34px;
+  align-items: stretch;
+  margin-bottom: 22px;
+  padding: 32px;
+  background:
+    linear-gradient(90deg, rgba(247, 246, 241, 0.94), rgba(247, 246, 241, 0.62)),
+    #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .article-list-header {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.5fr);
-  gap: 34px;
-  align-items: end;
-  margin-bottom: 28px;
+  align-content: center;
 }
 
 .article-list-header h1 {
   margin: 0;
-  font-size: clamp(2.3rem, 5vw, 4.8rem);
+  font-size: clamp(2.5rem, 5vw, 5.6rem);
   line-height: 1;
 }
 
 .article-list-header p:last-child {
-  margin: 0;
+  max-width: 620px;
+  margin: 20px 0 0;
   color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.article-library-hero img {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.article-topic-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 22px;
+}
+
+.article-topic-strip a {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  color: #ffffff;
+  background: var(--teal-dark);
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.article-topic-strip a:nth-child(2) {
+  background: var(--cobalt);
+}
+
+.article-topic-strip a:nth-child(3) {
+  background: var(--steel);
+}
+
+.article-topic-strip a:nth-child(4) {
+  background: var(--leaf);
+}
+
+.article-topic-strip a:nth-child(5) {
+  background: var(--coral);
+}
+
+.article-list-page .article-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.article-list-page .article-card {
+  min-height: 220px;
+}
+
+.article-list-page .article-card:nth-child(6n + 1) {
+  background: #ffffff;
+}
+
+.article-list-page .article-card:nth-child(6n + 2) {
+  background: #f3f8f6;
+}
+
+.article-list-page .article-card:nth-child(6n + 3) {
+  background: #f6f7ff;
+}
+
+.article-list-page .article-card:nth-child(6n + 4) {
+  background: #fff7ed;
+}
+
+.article-list-page .article-card:nth-child(6n + 5) {
+  background: #f4f7ef;
+}
+
+.article-list-page .article-card:nth-child(6n) {
+  background: #fff3ef;
 }
 
 .post-shell {
@@ -985,7 +1107,7 @@ h1 {
   .intro-band,
   .content-shell,
   .section-heading,
-  .article-list-header,
+  .article-library-hero,
   .cluster-heading,
   .training-pathway,
   .human-ai-band,
@@ -1006,6 +1128,17 @@ h1 {
   .cluster-grid,
   .human-ai-links,
   .pathway-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pathway-image,
+  .human-ai-image {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 260px;
+  }
+
+  .article-list-page .article-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1038,6 +1171,10 @@ h1 {
   }
 
   .article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-list-page .article-grid {
     grid-template-columns: 1fr;
   }
 
