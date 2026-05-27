@@ -200,42 +200,6 @@ h1 {
   border: 1px solid var(--line);
 }
 
-.ad-band {
-  padding: 22px 6vw;
-  background: var(--surface);
-  border-block: 1px solid var(--line);
-}
-
-.ad-slot {
-  display: grid;
-  place-items: center;
-  gap: 2px;
-  min-height: 96px;
-  color: #697578;
-  background:
-    repeating-linear-gradient(135deg, rgba(0, 124, 120, 0.07) 0 10px, rgba(224, 163, 43, 0.08) 10px 20px),
-    #fbfbf8;
-  border: 1px dashed #a9b0aa;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.ad-slot span {
-  font-size: 0.84rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.ad-slot small {
-  font-size: 0.78rem;
-}
-
-.ad-slot-wide {
-  max-width: 980px;
-  margin: 0 auto;
-}
-
 .intro-band,
 .risk-band,
 .launch-plan,
@@ -428,10 +392,6 @@ h1 {
   top: 92px;
 }
 
-.ad-slot-square {
-  min-height: 250px;
-}
-
 .side-panel {
   padding: 22px;
 }
@@ -490,9 +450,26 @@ h1 {
   color: var(--muted);
 }
 
-.ad-slot-inline {
-  min-height: 140px;
+.manual-ad {
   margin: 30px 0;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.manual-ad:has(.adsbygoogle[data-ad-status="unfilled"]) {
+  display: none;
+}
+
+.manual-ad-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #7d8787;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .launch-plan {
@@ -705,7 +682,4 @@ h1 {
     padding: 22px;
   }
 
-  .ad-band {
-    padding-inline: 4vw;
-  }
 }
