@@ -12,6 +12,12 @@
   --coral: #c95d3d;
   --steel: #496978;
   --shadow: 0 18px 55px rgba(20, 26, 28, 0.12);
+  --site-width: 1180px;
+  --article-list-width: 1120px;
+  --post-width: 820px;
+  --page-width: 900px;
+  --page-edge: clamp(40px, 8vw, 112px);
+  --narrow-page-edge: clamp(38px, 7vw, 96px);
 }
 
 * {
@@ -49,7 +55,7 @@ img {
   justify-content: space-between;
   gap: 24px;
   min-height: 72px;
-  padding: 0 6vw;
+  padding: 0 clamp(24px, 6vw, 96px);
   background: rgba(247, 246, 241, 0.92);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(14px);
@@ -136,8 +142,8 @@ img {
 .hero-content {
   position: relative;
   z-index: 2;
-  width: min(720px, 88vw);
-  margin-left: 6vw;
+  width: min(720px, calc(100% - var(--page-edge)));
+  margin-left: clamp(24px, 6vw, 96px);
   padding: 110px 0 120px;
 }
 
@@ -207,7 +213,7 @@ h1 {
 .launch-plan,
 .content-shell,
 .article-preview {
-  width: min(1180px, 88vw);
+  width: min(var(--site-width), calc(100% - var(--page-edge)));
   margin: 0 auto;
 }
 
@@ -238,7 +244,7 @@ h1 {
 }
 
 .topic-clusters {
-  width: min(1180px, 88vw);
+  width: min(var(--site-width), calc(100% - var(--page-edge)));
   margin: 0 auto;
   padding: 16px 0 52px;
 }
@@ -633,7 +639,7 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.75fr);
   gap: 26px;
-  width: min(1180px, 88vw);
+  width: min(var(--site-width), calc(100% - var(--page-edge)));
   margin: 0 auto 34px;
   padding: 32px;
   background:
@@ -706,7 +712,7 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.8fr);
   gap: 26px;
-  width: min(1180px, 88vw);
+  width: min(var(--site-width), calc(100% - var(--page-edge)));
   margin: 0 auto 34px;
   padding: 32px;
   background:
@@ -761,7 +767,7 @@ h1 {
 }
 
 .article-list-page {
-  width: min(1180px, 88vw);
+  width: min(var(--article-list-width), calc(100% - var(--page-edge)));
   margin: 0 auto;
   padding: 44px 0 68px;
 }
@@ -875,7 +881,7 @@ h1 {
 }
 
 .post-shell {
-  width: min(860px, 88vw);
+  width: min(var(--post-width), calc(100% - var(--narrow-page-edge)));
   margin: 0 auto;
   padding: 56px 0 76px;
 }
@@ -989,7 +995,7 @@ h1 {
 }
 
 .page-shell {
-  width: min(900px, 88vw);
+  width: min(var(--page-width), calc(100% - var(--narrow-page-edge)));
   min-height: 58vh;
   margin: 0 auto;
   padding: 74px 0;
@@ -1033,7 +1039,7 @@ h1 {
   grid-template-columns: 1fr auto;
   gap: 32px;
   align-items: start;
-  padding: 42px 6vw;
+  padding: 42px clamp(24px, 6vw, 96px);
   color: #d8ddda;
   background: #1b2424;
 }
@@ -1150,6 +1156,25 @@ h1 {
 @media (max-width: 640px) {
   .site-header {
     min-height: 66px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 20px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .static-nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .static-nav a {
+    padding: 0;
   }
 
   .hero {
