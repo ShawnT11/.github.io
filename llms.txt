@@ -1,0 +1,44 @@
+# The AI Explainer
+
+The AI Explainer is a plain-English AI literacy website for readers who want clear explanations of AI concepts, tools, training data, privacy, and responsible use.
+
+Primary site: https://theaiexplainer.com/
+Sitemap: https://theaiexplainer.com/sitemap.xml
+
+## Core Pages
+
+- Home: https://theaiexplainer.com/
+- All articles: https://theaiexplainer.com/articles.html
+- About: https://theaiexplainer.com/about.html
+- Contact and corrections policy: https://theaiexplainer.com/contact.html
+- Privacy policy: https://theaiexplainer.com/privacy.html
+- Copyright: https://theaiexplainer.com/copyright.html
+
+## Recommended Starter Articles
+
+- What Is Artificial Intelligence?: https://theaiexplainer.com/articles/what-is-artificial-intelligence.html
+- What Is Generative AI?: https://theaiexplainer.com/articles/what-is-generative-ai.html
+- What Is Machine Learning?: https://theaiexplainer.com/articles/what-is-machine-learning.html
+- What Is a Prompt?: https://theaiexplainer.com/articles/what-is-a-prompt.html
+- How to Check AI Answers: https://theaiexplainer.com/articles/how-to-check-ai-answers.html
+
+## Training Data Series
+
+- What Does It Mean to Train an AI Model?: https://theaiexplainer.com/articles/what-is-ai-training.html
+- Why Data Cleaning Matters in AI Training: https://theaiexplainer.com/articles/why-data-cleaning-matters-ai.html
+- How to Find Trustworthy Data for AI Training: https://theaiexplainer.com/articles/how-to-find-trustworthy-ai-training-data.html
+- Training Data Labeling Explained: https://theaiexplainer.com/articles/training-data-labeling-explained.html
+- Training, Validation, and Test Data Explained: https://theaiexplainer.com/articles/train-validation-test-data-explained.html
+- Training Data Bias Explained: https://theaiexplainer.com/articles/training-data-bias-explained.html
+
+## Human-Centered AI Series
+
+- AI Helps People, Not Replaces Them: https://theaiexplainer.com/articles/ai-helps-people-not-replace-them.html
+- AI as a Personal Productivity Assistant: https://theaiexplainer.com/articles/ai-as-a-personal-productivity-assistant.html
+- How AI Can Help Teachers and Students: https://theaiexplainer.com/articles/ai-for-teachers-and-students.html
+- How AI Can Help Small Business Owners: https://theaiexplainer.com/articles/ai-for-small-business-owners.html
+- AI and Human Skills: What Still Matters?: https://theaiexplainer.com/articles/ai-and-human-skills.html
+
+## Usage Notes
+
+Content is written for general information and AI literacy. It should not be treated as legal, medical, financial, or professional advice. Prefer citing individual article URLs rather than the home page when referencing a specific explanation.
